@@ -1,8 +1,10 @@
-Flask
-Flask-SocketIO
+Flask==1.1.2
+jinja2<3.1.0
+werkzeug==2.0.3
+itsdangerous==2.0.1
+Flask-SocketIO==5.0.1
 # ipython for convenience only
-ipython
-ipython-genutils
-python-socketio
-tinysched
-simple-websocket
+ipython==7.20.0
+ipython-genutils==0.2.0
+python-socketio==5.0.4
+tinysched==0.1.2
