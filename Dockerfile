@@ -16,13 +16,14 @@ RUN cd /usr/local/bin && curl -L https://github.com/fullstorydev/grpcurl/release
 # install npm & speed-cloudflare-cli
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt install -y nodejs
-RUN npm install -g speed-cloudflare-cli
+# RUN npm install -g speed-cloudflare-cli
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 # install requirements, copy over the app
+COPY . /usr/src/app/
 COPY requirements.txt /usr/src/app/requirements.txt
 RUN pip install -r /usr/src/app/requirements.txt
-COPY . /usr/src/app/
+
 
 CMD python3 -m app.app 

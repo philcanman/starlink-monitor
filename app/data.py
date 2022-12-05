@@ -116,11 +116,11 @@ def _update_starlink_status():
     DATA['starlink_status'] = _trim_buffer(DATA['starlink_status'])
 
 
-def _update_speedtest():
-    for k, v in speedtest.test().items():
-        DATA['speedtest'][k].append(v)
+# def _update_speedtest():
+#     for k, v in speedtest.test().items():
+#         DATA['speedtest'][k].append(v)
 
-    DATA['speedtest'] = _trim_buffer(DATA['speedtest'])
+#     DATA['speedtest'] = _trim_buffer(DATA['speedtest'])
 
 
 def _trim_buffer(b, secs_history=BUFFER_SIZE_SECS):
@@ -205,7 +205,7 @@ def start_polling():
         interval=datetime.timedelta(seconds=STARLINK_HISTORY_REFRESH_SECS)
     )
 
-    scheduler.repeat(
-        _update_speedtest,
-        interval=datetime.timedelta(minutes=SPEEDTEST_REFRESH_MINS)
-    )
+    # scheduler.repeat(
+    #     _update_speedtest,
+    #     interval=datetime.timedelta(minutes=SPEEDTEST_REFRESH_MINS)
+    # )

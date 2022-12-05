@@ -19,9 +19,9 @@ def _data():
     ))
 
 
-@app.route('/api/trigger_speedtest')
-def _speedtest():
-    data._update_speedtest()
+# @app.route('/api/trigger_speedtest')
+# def _speedtest():
+#     data._update_speedtest()
 
 
 @app.route('/')

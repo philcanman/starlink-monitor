@@ -107,12 +107,12 @@ const render = (data) => {
     renderThroughput(data, 'g1')
     renderPing(data, 'g2')
     renderPingDrop(data, 'g3')
-    renderSpeedTest(data, 'g4')
+    // renderSpeedTest(data, 'g4')
   } else {
     renderPing(data, 'g1')
     renderThroughput(data, 'g2')
     renderPingDrop(data, 'g3')
-    renderSpeedTest(data, 'g4')
+    // renderSpeedTest(data, 'g4')
   }
   renderObstructionMap(data)
 }
@@ -423,26 +423,26 @@ const renderObstructionMap = (data) => {
   Plotly.newPlot('obstructions', pdata, lout, config)
 }
 
-const triggerSpeedtest = () => {
-  fetch('/api/trigger_speedtest')
+// const triggerSpeedtest = () => {
+//   fetch('/api/trigger_speedtest')
 
-  if (singleColumnView()) {
-    window.alert('Speedtest initiated')
-  } else {
-    // show alert, then fade out
-    const modal = document.getElementById('speedtestmodal')
-    modal.style.opacity = 1
-    const fade = () => {
-      modal.style.opacity *= 0.9
-      if (modal.style.opacity < 0.2) {
-        modal.style.opacity = 0
-      } else {
-        setTimeout(fade, 30)
-      }
-    }
-    setTimeout(fade, 2000)
-  }
-}
+//   if (singleColumnView()) {
+//     window.alert('Speedtest initiated')
+//   } else {
+//     // show alert, then fade out
+//     const modal = document.getElementById('speedtestmodal')
+//     modal.style.opacity = 1
+//     const fade = () => {
+//       modal.style.opacity *= 0.9
+//       if (modal.style.opacity < 0.2) {
+//         modal.style.opacity = 0
+//       } else {
+//         setTimeout(fade, 30)
+//       }
+//     }
+//     setTimeout(fade, 2000)
+//   }
+// }
 
 
 const singleColumnView = () => {

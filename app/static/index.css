@@ -1,5 +1,6 @@
 body {
   background-image: url('background.jpg');
+  background-size: 100% 100%;
   background-position: center 0;
   background-color: #00000000;
   color: #ffffff;
@@ -26,8 +27,8 @@ button {
 }
 
 .grid-container>div {
-  height: 200px;
-  width: 90%;
+  height: 250px;
+  width: 95%;
   margin: 30px
 }
 
@@ -41,7 +42,7 @@ select {
 
 .obst {
   margin: auto;
-  height: 400px;
+  height: 200px;
   width: 400px;
 }
 
